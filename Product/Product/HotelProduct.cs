@@ -8,9 +8,11 @@ namespace Product
 {
     class HotelProduct : IProduct
     {
-        public string itemname = "swift";
+        
+        public string itemname = "NNOVATE";
         public int itemid = 1;
         public bool isbooked;
+        public double fare=100;
         public string itemName
         {
             get
@@ -38,26 +40,30 @@ namespace Product
         {
             get
             {
-                return isBooked;
+                return isbooked;
             }
             set
             {
 
-                isBooked = value;
+                isbooked = value;
             }
         }
-        public void Save()
+        public double Fare
         {
-            Console.WriteLine("hotel save");
+            get
+            {
+                return fare;
+            }
+            set
+            {
 
+                fare = value;
+            }
         }
-        public void Book()
+        public string GetTypeOf()
         {
-            Console.WriteLine("hotel save");
+            return "HotelProduct";
         }
-        public string GetTypeOfProduct()
-        {
-            return "";
-        }
+
     }
 }

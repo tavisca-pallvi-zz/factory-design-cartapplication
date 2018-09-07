@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Product
 {
-   public interface IRepository
+   public interface IProductStrategy
     {
-        void Add(IProduct product,double fare);
+        double ProductFare(IProduct prod);
        
     }
 }

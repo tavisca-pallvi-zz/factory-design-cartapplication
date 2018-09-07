@@ -8,11 +8,10 @@ namespace Product
 {
     class AirProduct : IProduct
     {
-        public string airName;
-        public int airId;
         public string itemname = "swift";
         public int itemid = 1;
         public bool isbooked = false;
+        public double fare = 40;
         public string itemName
         {
             get
@@ -40,26 +39,30 @@ namespace Product
         {
             get
             {
-                return isBooked;
+                return isbooked;
             }
             set
             {
 
-                isBooked = value;
+                isbooked = value;
             }
         }
-        public void Save()
+        public double Fare
         {
-            Console.WriteLine("air save");
-        }
-        public void Book()
-        {
-            Console.WriteLine("air book");
+            get
+            {
+                return fare;
+            }
+            set
+            {
 
+                fare = value;
+            }
         }
-        public string GetTypeOfProduct()
+        public string GetTypeOf()
         {
-            return "";
+            return "AirProduct";
         }
+
     }
 }

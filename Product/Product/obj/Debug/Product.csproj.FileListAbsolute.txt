@@ -12,3 +12,10 @@ C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\obj\D
 C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\bin\Debug\Product.exe.config
 C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\bin\Debug\Product.exe
 C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\bin\Debug\Product.pdb
+C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\bin\Debug\Product.exe.config
+C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\bin\Debug\Product.exe
+C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\bin\Debug\Product.pdb
+C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\obj\Debug\Product.csprojAssemblyReference.cache
+C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\obj\Debug\Product.csproj.CoreCompileInputs.cache
+C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\obj\Debug\Product.exe
+C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\obj\Debug\Product.pdb

@@ -11,14 +11,12 @@ namespace Product
     {
         private static FileRepository _instance;
 
-        private static string path=@"C:\filelog.txt";
+       public string path=@"C:\file.txt";
         //private IProduct product;
         private FileRepository() {
-
-
-            //System.IO.FileStream fs = new FileStream(@"C:\filelog.txt", FileMode.Append, FileAccess.Write);
+            
         }
-
+      
         public static FileRepository Instance
         {
             get
@@ -30,16 +28,16 @@ namespace Product
                 return _instance;
             }
         }
-        public void  AddToFile(IProduct prod,string msg)
+        public void Add(string msg)
         {
 
-            using (StreamWriter writer = File.AppendText(path)) 
+            using (StreamWriter writer = File.AppendText(path))
             {
-                writer.WriteLine(msg + "" + prod.itemName);
-                writer.WriteLine(msg + "" + prod.isBooked);
+
+                writer.WriteLine(msg);
             }
 
-
         }
+
     }
 }

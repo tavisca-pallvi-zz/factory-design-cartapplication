@@ -11,20 +11,11 @@ namespace Product
         IProduct prod;
         public  IProduct GetProduct(string itemType)
         {
-            if(String.Compare(itemType,"CarProduct")==0)
-            {
-                prod = new CarProduct();
-            }
-            else if (String.Compare(itemType, "Hotel") == 0)
-            {
-                prod = new HotelProduct();
-            }
-            else if (String.Compare(itemType, "Air") == 0)
-            {
-                prod = new AirProduct();
-            }
-           
-            return prod;
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            var productType = assembly.GetTypes().FirstOrDefault(t => t.Name ==itemType );
+            return (IProduct)Activator.CreateInstance(productType);
+
+        
         }
     }
 }

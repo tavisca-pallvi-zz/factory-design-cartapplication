@@ -23,8 +23,12 @@ namespace Product
             get;
             set;
         }
-        void Save();
-        void Book();
-        string GetTypeOfProduct();
+        double Fare
+        {
+            get;
+            set;
+        }
+        string GetTypeOf();
+       
     }
 }

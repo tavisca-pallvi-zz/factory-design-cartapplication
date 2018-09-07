@@ -8,9 +8,10 @@ namespace Product
 {
     class CarProduct : IProduct
     {
-        public string itemname="swift";
-        public int itemid=1;
-        public bool isbooked;
+        public string itemname = "swift";
+        public int itemid = 1;
+        public bool isbooked = false;
+        public double fare = 30;
         public string itemName
         {
             get
@@ -38,33 +39,33 @@ namespace Product
         {
             get
             {
-                return isBooked;
+                return isbooked;
             }
             set
             {
 
-                isBooked = value;
+                isbooked = value;
             }
         }
+        public double Fare
+        {
+            get
+            {
+                return fare;
+            }
+            set
+            {
+
+                fare = value;
+            }
+        }
+
         string msg = "";
-        FileRepository fileob = FileRepository.Instance;
-        public void Save()
+
+        public string GetTypeOf()
         {
-            msg = "carsaved";
-            isBooked = false;
-            fileob.AddToFile(this,msg);
-            Console.WriteLine("car save");
-        }
-        public void Book()
-        {
-            msg = "carbooked";
-            isBooked = true;
-            fileob.AddToFile(this,msg);
-            Console.WriteLine("car book");
-        }
-        public string GetTypeOfProduct()
-        {
-            return "";
+            return "CarProduct";
         }
     }
 }
+      
