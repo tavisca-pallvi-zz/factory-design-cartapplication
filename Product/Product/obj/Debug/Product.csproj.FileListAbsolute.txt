@@ -5,3 +5,10 @@ C:\Users\pgoel\source\repos\Product\Product\obj\Debug\Product.csprojAssemblyRefe
 C:\Users\pgoel\source\repos\Product\Product\obj\Debug\Product.csproj.CoreCompileInputs.cache
 C:\Users\pgoel\source\repos\Product\Product\obj\Debug\Product.exe
 C:\Users\pgoel\source\repos\Product\Product\obj\Debug\Product.pdb
+C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\obj\Debug\Product.csprojResolveAssemblyReference.cache
+C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\obj\Debug\Product.csproj.CoreCompileInputs.cache
+C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\obj\Debug\Product.exe
+C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\obj\Debug\Product.pdb
+C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\bin\Debug\Product.exe.config
+C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\bin\Debug\Product.exe
+C:\Users\pgoel\source\repos\factory-design-cartapplication\Product\Product\bin\Debug\Product.pdb

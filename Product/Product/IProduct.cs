@@ -8,6 +8,21 @@ namespace Product
 {
   public  interface IProduct
     {
+        string itemName
+        {
+            get;
+            set;
+        }
+        int itemId
+        {
+            get;
+            set;
+        }
+        bool isBooked
+        {
+            get;
+            set;
+        }
         void Save();
         void Book();
         string GetTypeOfProduct();

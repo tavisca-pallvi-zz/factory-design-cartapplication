@@ -14,6 +14,7 @@ namespace Product
             string itemType = Console.ReadLine();
 
             IProduct prod = createType.GetProduct(itemType);
+           
             try
             {
 
@@ -26,6 +27,8 @@ namespace Product
                 Console.WriteLine("not created type");
 
             }
+            
+
             Console.ReadKey();
         }
     }

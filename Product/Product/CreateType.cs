@@ -23,11 +23,7 @@ namespace Product
             {
                 prod = new AirProduct();
             }
-            else if (String.Compare(itemType, "Activity") == 0)
-            {
-                prod = new ActiviyProduct();
-            }
-
+           
             return prod;
         }
     }
