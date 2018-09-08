@@ -26,7 +26,10 @@ namespace Product
             {
                 prodStrategy = new AirStrategy();
             }
-
+            else if (product == typeof(ActivityProduct))
+            {
+                prodStrategy = new ActivityStrategy();
+            }
             return prodStrategy;
 
         }

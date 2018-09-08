@@ -19,3 +19,10 @@ C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\obj\De
 C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\obj\Debug\Product.csproj.CoreCompileInputs.cache
 C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\obj\Debug\Product.exe
 C:\Users\pgoel\Desktop\git\factory-design-cartapplication\Product\Product\obj\Debug\Product.pdb
+C:\Users\HP\Desktop\gits\factory-design-cartapplication\Product\Product\bin\Debug\Product.exe.config
+C:\Users\HP\Desktop\gits\factory-design-cartapplication\Product\Product\bin\Debug\Product.exe
+C:\Users\HP\Desktop\gits\factory-design-cartapplication\Product\Product\bin\Debug\Product.pdb
+C:\Users\HP\Desktop\gits\factory-design-cartapplication\Product\Product\obj\Debug\Product.csprojAssemblyReference.cache
+C:\Users\HP\Desktop\gits\factory-design-cartapplication\Product\Product\obj\Debug\Product.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\gits\factory-design-cartapplication\Product\Product\obj\Debug\Product.exe
+C:\Users\HP\Desktop\gits\factory-design-cartapplication\Product\Product\obj\Debug\Product.pdb
