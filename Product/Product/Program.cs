@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Caching;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,9 +11,7 @@ namespace Product
     {
 
         private static FileRepository fileob = FileRepository.Instance;
-        //      public IRepository storageType;
-
-
+  
         static void Main(string[] args)
         {
 
@@ -23,6 +22,9 @@ namespace Product
             ProductService productService = new ProductService();
             Console.WriteLine("Enter the type of product you want :");
             string itemType = Console.ReadLine();
+            CacheService Cacheobj = new CacheService();
+
+        
 
             try
             {
@@ -40,6 +42,11 @@ namespace Product
             Console.WriteLine("Enter which operartion you want to perform: 1:save 2:book ");
             int option = Int32.Parse(Console.ReadLine());
             char optdatabase;
+            IRepository storageType;
+            ICache CacheType = new MemoryCachess();
+            CacheDecorators CacheDec = new CacheDecorators();
+            CacheDec.CheckForCache(CacheType,prod);
+            CacheDec.CheckForCache(CacheType, prod);
 
             switch (option)
             {
@@ -57,17 +64,20 @@ namespace Product
                                 {
                                     string ms = "productsel";
                                     fileob.Add("fILESTORAGE STORAGETYPE SELECTED");
-                                    IRepository storageType = new FileStorage();
+                                     storageType = new FileStorage();
                                     storageType.Add(prod, CalFare.ProductFare(prod));
                                     break;
                                 }
                             case 'D':
                                 {
                                     string ms = "pradded database";
+                                    //if (cache.Get(itemType) == null)
+                                    //{
+                                    //    cacheobj.AddToCache(itemType);
+                                    //}
+                                        fileob.Add("SQL STORAGE STORAGETYPE SELECTED");
 
-                                    fileob.Add("SQL STORAGE STORAGETYPE SELECTED");
-
-                                    IRepository storageType = new SqlRepository();
+                                     storageType = new SqlRepository();
                                     storageType.Add(prod, CalFare.ProductFare(prod));
                                     break;
 
@@ -91,17 +101,15 @@ namespace Product
                                 {
                                     string ms = "productsel";
                                     fileob.Add("fILESTORAGE STORAGETYPE SELECTED");
-                                    IRepository storageType = new FileStorage();
+                                    storageType = new FileStorage();
                                     storageType.Add(prod, CalFare.ProductFare(prod));
                                     break;
                                 }
                             case 'D':
                                 {
                                     string ms = "pradded database";
-
                                     fileob.Add("SQL STORAGE STORAGETYPE SELECTED");
-
-                                    IRepository storageType = new SqlRepository();
+                                    storageType = new SqlRepository();
                                     storageType.Add(prod, CalFare.ProductFare(prod));
                                     break;
 
@@ -116,12 +124,13 @@ namespace Product
 
 
             }
-
-
+            
+            
             Console.ReadKey();
 
         }
     }
 }
+    
 
 

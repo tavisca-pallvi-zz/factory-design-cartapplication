@@ -13,13 +13,14 @@ namespace Product
         public void Add(IProduct product, double fare)
         {
 
+
             FileRepository.Instance.Add("Here in SqlRepository" + "Add function is called" + "To add product in SQL DataBase");
 
             Console.WriteLine("IN ADDD DATATBASE");
             IProduct prod = null;
 
             SqlConnection connectionobject = new SqlConnection();
-            connectionobject.ConnectionString = "Data Source=TAVDESK004;Initial Catalog=ProductDatabase;User ID=sa;Password=test123!@#";
+            connectionobject.ConnectionString = "Data Source=TAVDESK004;Initial Catalog=Product;User ID=Sa;Password=test123!@#";
             //connectionobject.ConnectionString = "Data Source=TAVDESK004;Initial Catalog=Product;Integrated Security=True";
             connectionobject.Open();
             FileRepository.Instance.Add("Connection opened ");
@@ -38,7 +39,43 @@ namespace Product
             cmd.ExecuteNonQuery();
             connectionobject.Close();
         }
+        public void Get(IProduct product)
+        {
+            IProduct RefProduct = null;
+            string typeProduct = product.GetTypeOf();
+            string queryString =
+       "SELECT * from " + typeProduct;
+            using (SqlConnection connectionobject =
+                       new SqlConnection()) {
+                connectionobject.ConnectionString = "Data Source=TAVDESK004;Initial Catalog=Product;User ID=Sa;Password=test123!@#";
+
+                connectionobject.Open();
+
+                SqlCommand command =
+                    new SqlCommand(queryString, connectionobject);
+               
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Call Read before accessing data.
+                while (reader.Read())
+                {
+                    Console.WriteLine((reader["ItemID"].ToString()));
+                    Console.WriteLine(reader["ItemName"].ToString());
+                    Console.WriteLine(Double.Parse(reader["Fare"].ToString()));
+                    Console.WriteLine(Int32.Parse(reader["IsBooked"].ToString()));
+
+                }
+
+                // Call Close when done reading.
+                reader.Close();
+                connectionobject.Close();
+            }
+
+
+        }
+
+
+
     }
-
 }
-

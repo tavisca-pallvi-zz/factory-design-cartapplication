@@ -35,6 +35,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,17 +47,23 @@
   <ItemGroup>
     <Compile Include="AirProduct.cs" />
     <Compile Include="AirStrategy.cs" />
+    <Compile Include="CacheDecorators.cs" />
+    <Compile Include="CacheService.cs" />
     <Compile Include="CarProduct.cs" />
     <Compile Include="CarStrategy.cs" />
     <Compile Include="CreateStrategy.cs" />
     <Compile Include="CreateType.cs" />
     <Compile Include="FileRepository.cs" />
     <Compile Include="FileStorage.cs" />
+    <Compile Include="BaseGetService.cs" />
+    <Compile Include="GetService.cs" />
     <Compile Include="HotelProduct.cs" />
     <Compile Include="HotelStrategy.cs" />
+    <Compile Include="ICache.cs" />
     <Compile Include="IProduct.cs" />
     <Compile Include="IProductStrategy.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="MemoryCache.cs" />
     <Compile Include="ProductService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Product
 {
-   public interface IRepository
+   public interface ICache
     {
-        void Add(IProduct product,double fare);
-        void Get(IProduct product);
+        void AddToCache(string key, IProduct value);
+
+        void GetFromCache(string prodType, IProduct prod);
     }
 }

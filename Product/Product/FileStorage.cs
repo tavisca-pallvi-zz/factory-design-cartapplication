@@ -25,6 +25,8 @@ namespace Product
             }
 
         }
-
+        public void Get(IProduct prod)
+        {
+        }
     }
 }
