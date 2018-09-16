@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Product
 {
-   public interface IProductStrategy
+    interface IUserChoice<T>
     {
-        double ProductFare(IProduct prod);
-       
+
+        T GetChoice();
     }
 }

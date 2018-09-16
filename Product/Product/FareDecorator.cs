@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace Product
 {
-    class CreateStrategy
+   public class FareDecorator
     {
-
-        IProductStrategy prodStrategy;
-        public IProductStrategy GetProductStrategy(IProduct prod)
+        private UpdateFare products;  //this is on which product to beapplied
+        private ProductStrategy prodStrategy;//this is which strategy to be applied
+        public void GetActualFare(IProduct prod)
         {
-      
             Type product = prod.GetType();
             if (product == typeof(CarProduct))
             {
@@ -30,7 +29,8 @@ namespace Product
             {
                 prodStrategy = new ActivityStrategy();
             }
-            return prodStrategy;
+            products = new UpdateFare(prodStrategy);
+            products.ShowActualPrice(prod);
 
         }
     }

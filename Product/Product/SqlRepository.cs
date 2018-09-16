@@ -24,7 +24,7 @@ namespace Product
             connectionobject.Open();
             FileRepository.Instance.Add("Connection opened ");
 
-            string typeProduct = product.GetTypeOf();
+          string typeProduct = product.GetTypeOf();
             FileRepository.Instance.Add("Insert function is called");
             string query = "insert into " + typeProduct + " values(@name,@id,@fare,@isbooked)";
             SqlCommand cmd = new SqlCommand(query, connectionobject);

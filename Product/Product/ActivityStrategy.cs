@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Product
 {
-    class ActivityStrategy:IProductStrategy
+   public class ActivityStrategy:ProductStrategy
     {
-        public double ProductFare(IProduct activity)
+        public override double ProductFare(IProduct activity)
         {
             FileRepository.Instance.Add("In Activity Strategy function product fare function is called" + "Activity Product Fare is updated");
             return activity.Fare + 20;

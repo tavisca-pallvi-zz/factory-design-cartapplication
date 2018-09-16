@@ -29,6 +29,6 @@ namespace Product
             set;
         }
         string GetTypeOf();
-       
+   
     }
 }

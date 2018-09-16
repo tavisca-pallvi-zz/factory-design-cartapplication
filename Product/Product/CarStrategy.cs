@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Product
 {
-    class CarStrategy:IProductStrategy
+    public class CarStrategy : ProductStrategy
     {
-       public double ProductFare(IProduct car)
+        public override double ProductFare(IProduct prod)
         {
-            FileRepository.Instance.Add("Car Strategy function product fare is called"+"Car Product Fare is updated");
-            return car.Fare+20;
+            FileRepository.Instance.Add("car strategy function product fare is called" + "car product fare is updated");
+            return prod.Fare + 20;
 
         }
 

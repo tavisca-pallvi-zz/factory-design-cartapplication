@@ -8,12 +8,12 @@ namespace Product
 {
     public class CreateType
     {
-        IProduct prod;
-        public  IProduct GetProduct(string itemType)
+        Object prod;
+        public  Object GetProduct(string itemType)
         {
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             var productType = assembly.GetTypes().FirstOrDefault(t => t.Name ==itemType );
-            return (IProduct)Activator.CreateInstance(productType);
+            return (Object)Activator.CreateInstance(productType);
 
         
         }
